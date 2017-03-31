@@ -24,3 +24,15 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## Detailed steps of run_analysis script (also in the actual script)
+
+* download and unzip the files
+* load train and test datasets
+* merge these two datasets to "onedataset"
+* read features from extracted txt files and change format from factor to character
+* add descriptive labels to the data set
+* extract subject, activity and columns of mean and standard deviation
+* use descriptive activity names to name activities in the dataset
+* create a second independant tidy data with the average of each variable for each activity and subject, using melt() and dcast()
+* export the tidy data set to tidyset.txt with write.table() specifying row.names = FALSE
